@@ -1,0 +1,6 @@
+package com.techlabs.model;
+
+public class Rectangle {
+private in width;
+private int height;
+}

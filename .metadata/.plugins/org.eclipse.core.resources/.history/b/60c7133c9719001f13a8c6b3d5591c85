@@ -1,0 +1,36 @@
+package com.techlabs.model;
+
+public class Complex {
+	private double imaginary;
+	private double real;
+
+	public Complex() {
+		this(1, 1);
+	}
+
+	public Complex(double imaginary, double real) {
+		this.imaginary = imaginary;
+		this.real = real;
+	}
+
+	public void setImaginary(double imaginary) {
+		this.imaginary = imaginary;
+	}
+
+	public double getImaginary() {
+		return imaginary;
+	}
+
+	public void setReal(double real) {
+		this.real = real;
+	}
+
+	public double getReal() {
+		return real;
+	}
+
+	public void getAddition(Complex object1, Complex object2) {
+		this.imaginary = object1.imaginary + object2.imaginary;
+		this.real = object1.real + object2.real;
+	}
+}

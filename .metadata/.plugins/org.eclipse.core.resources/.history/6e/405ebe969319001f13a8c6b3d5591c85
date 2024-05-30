@@ -1,0 +1,15 @@
+package com.techlabs.model;
+
+public class Complex {
+	private int imaginary;
+	private int real;
+
+	public Complex() {
+		this(1, 1);
+	}
+
+	public Complex(int imaginary, int real) {
+		this.imaginary = imaginary;
+		this.real = real;
+	}
+}

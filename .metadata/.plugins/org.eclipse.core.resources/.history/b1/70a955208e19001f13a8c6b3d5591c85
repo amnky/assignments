@@ -1,0 +1,37 @@
+package com.techlabs.model;
+
+public class Rectangle {
+	private double width;
+	private double height;
+
+	public Rectangle() {
+
+		width = 1;
+		height = 1;
+	}
+
+	public Rectangle(double rwidth, double rheight) {
+		width = rwidth;
+		height = rheight;
+	}
+
+	public void setWidth(int rwidth) {
+		width = rwidth;
+	}
+
+	public double getWidth() {
+		return width;
+	}
+
+	public void setHeight(int rheight) {
+		height = rheight;
+	}
+
+	public double getHeight() {
+		return height;
+	}
+
+	public double getArea() {
+		return width * height;
+	}
+}

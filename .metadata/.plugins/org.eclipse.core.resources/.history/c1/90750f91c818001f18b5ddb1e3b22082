@@ -1,0 +1,13 @@
+package com.techlabs.test;
+
+import com.techlabs.model.Point;
+
+public class PointTest {
+
+	public static void main(String[] args) {
+		Point pt1 = new Point();
+		System.out.println("Point 1 :");
+		System.out.println("("+pt1.getX()+" , "+pt1.getY()+" )");
+	}
+
+}

@@ -1,0 +1,29 @@
+package com.techlabs.model;
+
+public class Employee {
+	private int employeeId;
+	private String employeeName;
+	private int employeeSalary;
+
+	public Employee() {
+		System.out.println("Employee Details");
+	}
+
+	public Employee(int EId, String EName, int ESalary) {
+		employeeId = EId;
+		employeeName = EName;
+		employeeSalary = ESalary;
+	}
+
+	public int getemployeeId() {
+		return employeeId;
+	}
+
+	public String getemployeeName() {
+		return employeeName;
+	}
+
+	public int getemployeeSalary() {
+		return employeeSalary;
+	}
+}

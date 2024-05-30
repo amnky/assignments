@@ -1,0 +1,56 @@
+package com.techlabs.test;
+
+import java.util.Scanner;
+
+import com.techlabs.model.Course;
+import com.techlabs.model.Student2;
+
+public class StudentTest2 {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter number of students");
+		int numOfStudents = scanner.nextInt();
+
+		Student2[] students = new Student2[numOfStudents];
+
+		for (Student2 student : students) {
+
+			student = new Student2();
+
+			System.out.println("Enter roll number");
+			student.setRollNumer(scanner.nextInt());
+
+			System.out.println("Enter student name");
+			student.setName(scanner.next());
+
+			System.out.println("Enter student age");
+			student.setAge(scanner.nextInt());
+
+			System.out.println("Enter student email id");
+			student.setEmailId(scanner.next());
+
+			System.out.println(
+					"Choose student course: Computerscience -1, ElectricalEngineer -2, Architecture -3, Mechnical -4 ");
+			int courseChoose = scanner.nextInt();
+			if (courseChoose == 1) {
+				student.setCourse(Course.Computerscience);
+			} else if (courseChoose == 2) {
+				student.setCourse(Course.ElectricalEngineer);
+			} else if (courseChoose == 3) {
+				student.setCourse(Course.Architecture);
+			} else if (courseChoose == 4) {
+				student.setCourse(Course.Mechnical);
+			}
+		}
+
+		for (Student2 student : students) {
+			System.out.println(student);
+			System.out.println();
+		}
+
+		scanner.close();
+
+	}
+
+}

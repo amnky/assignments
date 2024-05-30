@@ -1,0 +1,45 @@
+package com.techlabs.test;
+
+import java.util.Scanner;
+
+import com.techlabs.model.InputValidator;
+
+public class InputValidatorTest {
+
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+		InputValidator inputvalidate1 = new InputValidator();
+
+		System.out.println("Enter usrname to validate");
+		String userName = scanner.next();
+		boolean userNameValidate = inputvalidate1.validateUserName(userName);
+
+		if (userNameValidate) {
+			System.out.println("Username is Valid");
+		}
+		System.out.println("Username is not valid");
+
+		System.out.println("Enter password to validate");
+		String password = scanner.next();
+		boolean passwordValidate = inputvalidate1.validateUserName(password);
+
+		if (passwordValidate) {
+			System.out.println("password is Valid");
+		}
+		System.out.println("password is not valid");
+
+		System.out.println("Enter emailId to validate");
+		String emailId = scanner.next();
+		boolean emailIdValidate = inputvalidate1.validateUserName(emailId);
+
+		if (emailIdValidate) {
+			System.out.println("emailId is Valid");
+		}
+		System.out.println("emailId is not valid");
+
+		scanner.close();
+
+	}
+
+}
