@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/swabhhav.class1.com/src/swabhhav/class1/com/Addition.java"/>
+<listEntry value="/01-introduction/src/swabhhav/class1/com/Addition.java"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
@@ -10,5 +10,5 @@
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="swabhhav.class1.com.Addition"/>
 <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="swabhhav.class1.com"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="10 20"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="swabhhav.class1.com"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="01-introduction"/>
 </launchConfiguration>
