@@ -19,7 +19,6 @@
 <fullyQualifiedTypeName name="com.techlabs.test.EmployeeTest"/>
 <fullyQualifiedTypeName name="java.awt.Rectangle"/>
 <fullyQualifiedTypeName name="com.techlabs.model.Student"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="com.techlabs.model.Rectangle"/>
 <fullyQualifiedTypeName name="com.techlabs.model.Employee"/>
 <fullyQualifiedTypeName name="com.techlabs.model.Complex"/>
@@ -30,4 +29,8 @@
 <fullyQualifiedTypeName name="com.techlabs.model.Student2"/>
 <fullyQualifiedTypeName name="com.techlabs.model.InputValidator"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Constructor"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Parameter"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Method"/>
 </qualifiedTypeNameHistroy>
