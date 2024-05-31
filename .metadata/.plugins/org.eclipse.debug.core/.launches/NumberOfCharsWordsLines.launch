@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/06_Streams/src/com/techlabs/streams/NumberOfCharsWordsLines.java"/>
+<listEntry value="/06-Streams-app/src/com/techlabs/streams/NumberOfCharsWordsLines.java"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
@@ -9,5 +9,5 @@
 <booleanAttribute key="org.eclipse.jdt.launching.ATTR_EXCLUDE_TEST_CODE" value="true"/>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.techlabs.streams.NumberOfCharsWordsLines"/>
 <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value=""/>
-<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="06_Streams"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="06-Streams-app"/>
 </launchConfiguration>
