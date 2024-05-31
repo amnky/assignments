@@ -1,8 +1,8 @@
-package com.techlabs.whileloop;
+package com.amnky.assignments;
 
 import java.util.Scanner;
 
-public class NumberGuessApplication {
+public class numberguessapplication {
 
 	public static void main(String[] args) {
 		
