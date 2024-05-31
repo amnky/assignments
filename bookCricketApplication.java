@@ -1,9 +1,9 @@
-package com.monocept.assignments;
+package com.amnky.assignments;
 
 import java.util.Random;
 import java.util.Scanner;
 
-public class BookCricketApp {
+public class bookCricketApplication {
 
 	public static void main(String[] args) {
 		Scanner scanner=new Scanner(System.in);
