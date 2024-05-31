@@ -1,7 +1,7 @@
-package com.monocept.assignments;
+package com.amnky.assignments;
 import java.util.Scanner;
 
-public class TreasureHunt {
+public class treasureHunt {
 
 	public static void main(String[] args) {
 		System.out.println("Welcome to Treasure Island");
