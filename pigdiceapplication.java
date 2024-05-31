@@ -1,9 +1,9 @@
-package com.techlabs.forloop;
+package com.amnky.assignments;
 
 import java.util.Random;
 import java.util.Scanner;
 
-public class PigTailDiceGame {
+public class pigdiceapplication {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
