@@ -1,8 +1,8 @@
-package com.techlabs.ifelse;
+package com.amnky.assignments;
 
 import java.util.Scanner;
 
-public class WaterBill {
+public class waterbill {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
