@@ -2,7 +2,7 @@ package com.amnky.assignments;
 
 import java.util.Scanner;
 
-public class SubStringProblem {
+public class findSubString {
 
 	private static int[] computeLPS(String pattern) {
 		int m = pattern.length();
