@@ -1,12 +1,16 @@
 package com.techlabs.test;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.Scanner;
 
 import com.techlabs.model.CurrentAccount;
 import com.techlabs.model.SavingsAccount;
 
 public class AccountTest {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
 		Scanner scanner = new Scanner(System.in);
 
 		long accountNumber;
@@ -34,10 +38,7 @@ public class AccountTest {
 		amount = scanner.nextInt();
 		currentAccount1.debit(amount);
 
-		System.out.println();
-		System.out.println("Account number : " + currentAccount1.getAccountNumber());
-		System.out.println("Account holder name : " + currentAccount1.getAccountHolderName());
-		System.out.println("Account balance: " + currentAccount1.getAccountBalance());
+		System.out.println("Remaining balance: " + currentAccount1.getAccountBalance());
 		System.out.println("\n");
 
 		// Test SavingsAccount
@@ -60,11 +61,22 @@ public class AccountTest {
 		amount = scanner.nextInt();
 		savingsAccount1.debit(amount);
 
-		System.out.println();
-		System.out.println("Account number : " + savingsAccount1.getAccountNumber());
-		System.out.println("Account holder name : " + savingsAccount1.getAccountHolderName());
-		System.out.println("Account balance: " + savingsAccount1.getAccountBalance());
+		System.out.println("Remaining balance: " + savingsAccount1.getAccountBalance());
 
+//		Serialization
+		try {
+			FileOutputStream fileOutputStream = new FileOutputStream(
+					"C:\\Users\\ACER\\Documents\\MonoJava\\Serialization_practice\\serializedFile.ser");
+			ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+			objectOutputStream.writeObject(currentAccount1);
+			objectOutputStream.writeObject(savingsAccount1);
+			objectOutputStream.close();
+			fileOutputStream.close();
+		}
+
+		catch (IOException e) {
+			e.printStackTrace();
+		}
 		scanner.close();
 	}
 }

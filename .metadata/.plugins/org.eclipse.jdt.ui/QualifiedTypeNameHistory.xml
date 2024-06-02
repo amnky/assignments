@@ -27,16 +27,22 @@
 <fullyQualifiedTypeName name="com.techlabs.model.Course"/>
 <fullyQualifiedTypeName name="com.techlabs.model.Student2"/>
 <fullyQualifiedTypeName name="com.techlabs.model.InputValidator"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.lang.reflect.Constructor"/>
 <fullyQualifiedTypeName name="java.lang.reflect.Parameter"/>
 <fullyQualifiedTypeName name="java.lang.reflect.Method"/>
 <fullyQualifiedTypeName name="java.lang.Thread"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="java.lang.ClassLoader"/>
 <fullyQualifiedTypeName name="java.lang.Class"/>
 <fullyQualifiedTypeName name="java.awt.font.NumericShaper"/>
-<fullyQualifiedTypeName name="com.techlabs.model.Account"/>
 <fullyQualifiedTypeName name="com.techlabs.model.StaticDemo"/>
 <fullyQualifiedTypeName name="com.techlabs.model.BoxWeight"/>
+<fullyQualifiedTypeName name="com.techlabs.model.Account"/>
+<fullyQualifiedTypeName name="com.techlabs.model.CurrentAccount"/>
+<fullyQualifiedTypeName name="com.techlabs.model.SavingsAccount"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="com.techlabs.model.Vehicle"/>
+<fullyQualifiedTypeName name="com.techlabs.model.FourWheeler"/>
+<fullyQualifiedTypeName name="com.techlabs.model.Car"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>
