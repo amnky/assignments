@@ -13,8 +13,12 @@ public class SavingsAccount extends Account {
 		double newBalance = getAccountBalance() - amount;
 		if (newBalance < MIN_BALANCE) {
 			System.out.println("Minimum balance of " + MIN_BALANCE + " is required in Savings account, can't withdraw");
-		} else {
+			return;
+		}
+
+		if (newBalance >= MIN_BALANCE) {
 			setAccountBalance(newBalance);
 		}
+		System.out.println("Amount of " + amount + " is debited from your accont");
 	}
 }
