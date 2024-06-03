@@ -18,19 +18,16 @@ public class CarTest {
 
 		for (int i = 0; i < numberOfCars; i++) {
 
-			cars[i] = new Car();
-
 			System.out.println("Enter vehicle company name");
 			String companyName = scanner.next();
-			cars[i].setCompanyName(companyName);
 
 			System.out.println("Enter Fourwheeler mileage");
-			int mileage = scanner.nextInt();
-			cars[i].setMileage(mileage);
+			double mileage = scanner.nextInt();
 
 			System.out.println("Enter car price");
 			int price = scanner.nextInt();
-			cars[i].setPrice(price);
+
+			cars[i] = new Car(companyName, mileage, price);
 
 			System.out.println();
 		}

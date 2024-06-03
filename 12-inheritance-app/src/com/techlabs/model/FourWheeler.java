@@ -1,13 +1,22 @@
 package com.techlabs.model;
 
 public class FourWheeler extends Vehicle {
-	private int mileage;
+	private double mileage;
 
-	public int getMileage() {
+	public FourWheeler() {
+		super();
+	}
+
+	public FourWheeler(String companyName, double mileage) {
+		super(companyName);
+		this.mileage = mileage;
+	}
+
+	public double getMileage() {
 		return mileage;
 	}
 
-	public void setMileage(int mileage) {
+	public void setMileage(double mileage) {
 		this.mileage = mileage;
 	}
 }
