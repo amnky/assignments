@@ -17,7 +17,6 @@
 <fullyQualifiedTypeName name="com.techlabs.test.EmployeeTest"/>
 <fullyQualifiedTypeName name="java.awt.Rectangle"/>
 <fullyQualifiedTypeName name="com.techlabs.model.Student"/>
-<fullyQualifiedTypeName name="com.techlabs.model.Rectangle"/>
 <fullyQualifiedTypeName name="com.techlabs.model.Employee"/>
 <fullyQualifiedTypeName name="com.techlabs.model.Complex"/>
 <fullyQualifiedTypeName name="javax.sound.midi.Soundbank"/>
@@ -52,4 +51,8 @@
 <fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="com.techlabs.model.Derived"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="com.techlabs.model.Boy"/>
+<fullyQualifiedTypeName name="com.techlabs.model.Shape"/>
+<fullyQualifiedTypeName name="com.techlabs.model.Circle"/>
+<fullyQualifiedTypeName name="com.techlabs.model.Rectangle"/>
 </qualifiedTypeNameHistroy>

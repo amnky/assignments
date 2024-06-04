@@ -1,7 +1,0 @@
-package com.techlabs.model;
-
-public class InputValidator {
-	private String userName;
-	private String password;
-	private String emailId;
-}
