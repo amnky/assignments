@@ -30,11 +30,33 @@ public class PigTailDiceGame {
 			totalTurns++;
 			System.out.println("TURN : " + totalTurns);
 
-			System.out.println("Roll or Hold ?");
-			String action = scanner.nextLine();
+			int scoreForTurn = 0;
+			boolean rolling = true;
+			while (rolling) {
+				System.out.println("Roll or Hold ?");
+				String action = scanner.nextLine();
 
-			// calculating score for each turn
-			int scoreForTurn = calclateScoreForTurn(action, random, scanner);
+				if (action.equalsIgnoreCase("Hold")) {
+					rolling = false;
+					continue;
+				}
+
+				if (action.equalsIgnoreCase("Roll")) {
+					int turnScore = calculateScoreForTurn(random);
+					System.out.println("Score for the roll : " + turnScore);
+					if (turnScore == 0) {
+						System.out.println("Turn over!");
+						scoreForTurn = 0;
+						rolling = false;
+						continue;
+					}
+					scoreForTurn += turnScore;
+				}
+
+				if (!action.equalsIgnoreCase("Roll") && !action.equalsIgnoreCase("Hold")) {
+					System.out.println("Invalid input. Please enter 'Roll' or 'Hold'.");
+				}
+			}
 
 			System.out.println("Score for the turn : " + scoreForTurn);
 			sum += scoreForTurn;
@@ -43,23 +65,13 @@ public class PigTailDiceGame {
 		return new int[] { sum, totalTurns };
 	}
 
-	// Method to calculate score for each turn
-	private static int calclateScoreForTurn(String action, Random random, Scanner scanner) {
-		int scoreForTurn = 0;
-		while (action.equalsIgnoreCase("Roll")) {
-			int dice = random.nextInt(6) + 1;
-			System.out.println("Dice : " + dice);
-
-			if (dice == 1) {
-				scoreForTurn = 0;
-				System.out.println("Turn over!");
-				break;
-			}
-
-			scoreForTurn += dice;
-			System.out.println("Roll or Hold");
-			action = scanner.nextLine();
+	// Method to calculate score for each roll
+	private static int calculateScoreForTurn(Random random) {
+		int dice = random.nextInt(6) + 1;
+		System.out.println("Dice : " + dice);
+		if (dice == 1) {
+			return 0;
 		}
-		return scoreForTurn;
+		return dice;
 	}
 }
