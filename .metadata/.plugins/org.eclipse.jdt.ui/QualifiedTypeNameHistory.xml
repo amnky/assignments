@@ -1,23 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.awt.Dialog.ModalityType"/>
-<fullyQualifiedTypeName name="java.util.Random"/>
-<fullyQualifiedTypeName name="com.techlabs.arrays.SecondLargestElementOfArray"/>
-<fullyQualifiedTypeName name="java.lang.reflect.Array"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
-<fullyQualifiedTypeName name="java.lang.StrictMath"/>
-<fullyQualifiedTypeName name="java.lang.StringBuffer"/>
-<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
-<fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
-<fullyQualifiedTypeName name="java.io.IOException"/>
-<fullyQualifiedTypeName name="java.io.FileReader"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.awt.Point"/>
 <fullyQualifiedTypeName name="com.techlabs.model.Point"/>
 <fullyQualifiedTypeName name="com.techlabs.test.EmployeeTest"/>
 <fullyQualifiedTypeName name="java.awt.Rectangle"/>
 <fullyQualifiedTypeName name="com.techlabs.model.Student"/>
-<fullyQualifiedTypeName name="com.techlabs.model.Employee"/>
 <fullyQualifiedTypeName name="com.techlabs.model.Complex"/>
 <fullyQualifiedTypeName name="com.techlabs.model.AccountType"/>
 <fullyQualifiedTypeName name="com.techlabs.model.Course"/>
@@ -46,9 +33,7 @@
 <fullyQualifiedTypeName name="java.io.FileInputStream"/>
 <fullyQualifiedTypeName name="java.lang.Object"/>
 <fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="com.techlabs.model.Derived"/>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="com.techlabs.model.Boy"/>
 <fullyQualifiedTypeName name="com.techlabs.model.Circle"/>
 <fullyQualifiedTypeName name="java.lang.Readable"/>
@@ -58,5 +43,21 @@
 <fullyQualifiedTypeName name="javax.sound.midi.Soundbank"/>
 <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
 <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
+<fullyQualifiedTypeName name="com.techlabs.model.Voter"/>
+<fullyQualifiedTypeName name="com.techlabs.exceptions.AgeNotValidException"/>
+<fullyQualifiedTypeName name="com.techlabs.model.BankAccount"/>
+<fullyQualifiedTypeName name="java.lang.NegativeArraySizeException"/>
+<fullyQualifiedTypeName name="com.techlabs.exceptions.NegativeAmountException"/>
+<fullyQualifiedTypeName name="com.techlabs.exceptions.InsufficientFundsException"/>
+<fullyQualifiedTypeName name="java.lang.Throwable"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+<fullyQualifiedTypeName name="com.techlabs.test.ArrayList"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="com.techlabs.test.ArrayListTest"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.techlabs.model.Employee"/>
 </qualifiedTypeNameHistroy>
