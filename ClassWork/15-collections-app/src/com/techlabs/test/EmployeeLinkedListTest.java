@@ -1,18 +1,18 @@
 package com.techlabs.test;
 
-import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
+import java.util.LinkedList;
 import java.util.ListIterator;
 import java.util.Scanner;
 
 import com.techlabs.model.Employee;
 
-public class EmployeeTest {
+public class EmployeeLinkedListTest {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		List<Employee> employees = new ArrayList<Employee>();
+
+		LinkedList<Employee> employees = new LinkedList<Employee>();
 
 		System.out.println("Enter number employees to be added");
 		int numberOfEmployees = scanner.nextInt();
@@ -59,9 +59,12 @@ public class EmployeeTest {
 			System.out.println(empListIterator.previous());
 		}
 
+		Employee employee1 = new Employee(1234, "XYZ", 10000);
+		employees.offerFirst(employee1);
 		System.out.println("Using To string");
 		System.out.println(employees);
 		scanner.close();
+
 	}
 
 }

@@ -14,7 +14,7 @@ public class SmartHomeManagementTest {
 
 		Scanner scanner = new Scanner(System.in);
 
-		System.out.println("Enter the maximum number of smart devices in that can be added in your smart home");
+		System.out.println("Enter the maximum number of smart devices that can be added into your smart home");
 		int numberOfSmartdevices = scanner.nextInt();
 		SmartHome smartHome = new SmartHome(numberOfSmartdevices);
 
@@ -64,6 +64,7 @@ public class SmartHomeManagementTest {
 		scanner.nextLine(); // Consume newline
 
 		System.out.println("Enter Device ID :");
+
 		String deviceID = scanner.nextLine();
 
 		System.out.print("Enter Device Name : ");
@@ -89,7 +90,7 @@ public class SmartHomeManagementTest {
 
 		default:
 			System.out.println("Invalid device type. Please try again.");
-			addDevice(scanner, smartHome); // Allowing the user to re-enter the device type
+			addDevice(scanner, smartHome); // Allowing the user to re-enter the device type if he chooses invalid option
 			break;
 		}
 
