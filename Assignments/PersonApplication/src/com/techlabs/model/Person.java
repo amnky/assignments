@@ -1,5 +1,7 @@
 package com.techlabs.model;
 
+import java.util.Objects;
+
 public class Person {
 	private String personName;
 	private int personAge;
@@ -33,6 +35,28 @@ public class Person {
 
 	public void setPersonAddress(String personAddress) {
 		this.personAddress = personAddress;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+
+		if (obj == null || getClass() != obj.getClass()) {
+			return false;
+		}
+
+		Person person = (Person) obj;
+
+		return personAge == person.personAge && Objects.equals(personName, person.personName)
+				&& Objects.equals(personAddress, person.personAddress);
+	}
+
+	@Override
+	public int hashCode() {
+
+		return Objects.hash(personName, personAge, personAddress);
 	}
 
 	@Override

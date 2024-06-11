@@ -43,7 +43,7 @@ public class ArrayListDemo {
 		System.out.println(persons);
 
 		// Add a new Person object at the beginning of the ArrayList.
-		System.out.println("Added Person object at the beginning of the ArrayList ");
+		System.out.println("Add Person object at the beginning of the ArrayList ");
 		System.out.println("Enter Name of person");
 		String personName = scanner.nextLine();
 
@@ -59,7 +59,7 @@ public class ArrayListDemo {
 		System.out.println(persons);
 
 		// Add a new Person object at the end of the ArrayList.
-		System.out.println("Added Person object at the end of the ArrayList ");
+		System.out.println("Add Person object at the end of the ArrayList ");
 		System.out.println("Enter Name of person");
 		personName = scanner.nextLine();
 
@@ -75,7 +75,7 @@ public class ArrayListDemo {
 		System.out.println(persons);
 
 		// Insert a Person object at the third position in the ArrayList.
-		System.out.println("Added Person object at the 3rd position of the ArrayList ");
+		System.out.println("Add Person object at the 3rd position of the ArrayList ");
 		System.out.println("Enter Name of person");
 		personName = scanner.nextLine();
 
@@ -127,10 +127,12 @@ public class ArrayListDemo {
 		System.out.println(persons.get(1));
 
 //----------------->Removing Elements:
+
 		// Remove the first Person object from the ArrayList.
 		System.out.println("Removing the first Person object from the ArrayList");
 		persons.remove(0);
 		System.out.println(persons);
+
 		// Remove the Person object at the third position.
 		System.out.println("Removing the Person object at the third position");
 		persons.remove(2);
@@ -138,8 +140,10 @@ public class ArrayListDemo {
 
 //----------------->Searching Elements:
 
-		// Check if a specific Person (choose any criteria) exists in the ArrayList.
-		System.out.println("Check if a specific Person (choose any criteria) exists in the ArrayList.");
+		// Check and Print index of a specific Person (choose any criteria) if exists in
+		// the ArrayList.
+		System.out.println(
+				"Checking and printing Index of specific Person (choose any criteria) if exists in the ArrayList.");
 		System.out.println("Enter Name of person to search");
 		personName = scanner.nextLine();
 
@@ -153,11 +157,34 @@ public class ArrayListDemo {
 		Person person3 = new Person(personName, personAge, personAddress);
 		if (persons.contains(person3)) {
 			System.out.println("The Person exists in Array list");
+			System.out.println("Index At which specific person is present : " + persons.indexOf(person3));
 		} else {
 			System.out.println("The Person does not exist in Array list");
 		}
 
-		// Print the index of a specific Person (choose any criteria) in the ArrayList.
+//----------------->Traversing the ArrayList:
+
+		// Use a for-loop to traverse and print the details of each Person in the
+		// ArrayList.
+		System.out.println("Printing details of persons arraylist using for loop");
+		for (int i = 0; i < persons.size(); i++) {
+			System.out.println(persons.get(i));
+		}
+
+		// Use an enhanced for-loop (for-each loop) to traverse and print the details of
+		// each Person in the ArrayList.
+		System.out.println("Printing details of persons arraylist using enhanced for loop");
+		for (Person person4 : persons) {
+			System.out.println(person4);
+		}
+
+//----------------->Clearing the ArrayList:
+
+		// Clear all elements from the ArrayList.
+		// Print the ArrayList to confirm it is empty.
+		System.out.println("Clearing arraylist and printing arraylist to confirm it is empty");
+		persons.clear();
+		System.out.println(persons);
 
 		scanner.close();
 	}
