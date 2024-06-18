@@ -49,6 +49,7 @@ public class InsurancePolicyTest {
 					policyCreationDate);
 
 			policies.add(insurancePolicy);
+
 		}
 
 		boolean exit = false;
