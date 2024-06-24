@@ -30,7 +30,7 @@ public class NameTest {
 		// 1
 		System.out.println(
 				"\n1-Read the names from the provided text file (names.txt) and store them in a List of Strings");
-		String filePath = "C:\\Users\\ACER\\Documents\\MonoJava\\Assignments\\NamesStreamAssignment\\names";
+		String filePath = "C:\\Users\\ACER\\Documents\\MonoJava\\Assignments\\NamesStreamAssignment\\src\\com\\techlabs\\test\\names";
 		List<String> nameList = new ArrayList<String>();
 		try {
 			FileReader nameReader = new FileReader(filePath);
