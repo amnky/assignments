@@ -8,7 +8,6 @@ public class Test {
 		// TODO Auto-generated method stub
 		double number = 100.5;
 		int number3 = 100;
-
 		double number4 = number3; // implicit type conversion or widening expression
 
 		int number2 = (int) number; // type casting or explicit type casting or narrowing expression

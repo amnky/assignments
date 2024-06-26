@@ -15,11 +15,13 @@ public class TestStreams {
 			while ((ch = fileInputStream.read()) != -1) {
 				System.out.print((char) ch);
 			}
-		} catch (FileNotFoundException e) {
-			// TODO: handle exception
+		}
+
+		catch (FileNotFoundException e) {
 			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO: handle exception
+		}
+
+		catch (IOException e) {
 			e.printStackTrace();
 		}
 

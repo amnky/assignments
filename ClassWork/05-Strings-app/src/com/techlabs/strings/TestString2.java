@@ -5,7 +5,6 @@ public class TestString2 {
 	private static Object object;
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		String firstName = new String("Shankar");
 		StringBuffer middleName = new StringBuffer("Shiva");
 		StringBuilder lastName = new StringBuilder("Hale");

@@ -1,5 +1,6 @@
 package swabhav.class1.scanner;
-import java.util.*;
+
+import java.util.Scanner;
 
 public class Addition {
 
@@ -10,9 +11,9 @@ public class Addition {
 		int a = sc.nextInt();
 		System.out.println("Enter second number");
 		int b = sc.nextInt();
-		int sum = a+b;
-		
-		System.out.println("Sum : "+sum);
+		int sum = a + b;
+
+		System.out.println("Sum : " + sum);
 	}
 
 }

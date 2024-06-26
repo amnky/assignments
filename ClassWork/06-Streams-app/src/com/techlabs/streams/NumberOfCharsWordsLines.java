@@ -33,11 +33,15 @@ public class NumberOfCharsWordsLines {
 			System.out.println("Character count :" + charCount);
 			System.out.println("Word count :" + wordCount);
 
-		} catch (FileNotFoundException e) {
-			// TODO: handle exception
+			fileReader.close();
+
+		}
+
+		catch (FileNotFoundException e) {
 			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO: handle exception
+		}
+
+		catch (IOException e) {
 			e.printStackTrace();
 		}
 
