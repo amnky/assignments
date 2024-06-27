@@ -23,8 +23,8 @@ public class AccountTest {
         while (!exit){
             System.out.println("1. Create Savings Account");
             System.out.println("2. Create Current Account");
-            System.out.println("3. View Savings Account View");
-            System.out.println("4. View Current Account View");
+            System.out.println("3. View Savings Account");
+            System.out.println("4. View Current Account");
             System.out.println("5. Perform account related operations");
             System.out.println("6. Exit");
             choose=scanner.nextInt();

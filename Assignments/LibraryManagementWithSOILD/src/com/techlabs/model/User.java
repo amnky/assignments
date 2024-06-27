@@ -1,8 +1,8 @@
 package com.techlabs.model;
 
 public class User {
-private String userName;
-private int userId;
+    private String userName;
+    private int userId;
 
     public User(String userName, int userId) {
         this.userName = userName;
@@ -25,5 +25,18 @@ private int userId;
         this.userId = userId;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
 
+        User user = (User) o;
+
+        return userId == user.userId;
+    }
+
+    @Override
+    public int hashCode() {
+        return userId;
+    }
 }
