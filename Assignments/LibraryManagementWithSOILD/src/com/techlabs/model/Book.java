@@ -1,6 +1,6 @@
 package com.techlabs.model;
 
-public class Book {
+public abstract class Book {
 	private String title;
 	private String author;
 	private boolean isBorrowed;
@@ -9,6 +9,7 @@ public class Book {
 		this.title = title;
 		this.author = author;
 		this.isBorrowed = isBorrowed;
+
 	}
 
 	public String getTitle() {
@@ -35,12 +36,5 @@ public class Book {
 		this.isBorrowed = isBorrowed;
 	}
 
-	@Override
-	public String toString() {
-		return "Book{" +
-				"title='" + title + '\'' +
-				", author='" + author + '\'' +
-				", isBorrowed=" + isBorrowed +
-				'}';
-	}
+	public abstract String getBookType();
 }

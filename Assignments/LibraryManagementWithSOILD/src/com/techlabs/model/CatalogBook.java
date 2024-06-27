@@ -1,13 +1,10 @@
 package com.techlabs.model;
 
-public class CatalogBook {
-    private Book book;
+public class CatalogBook implements ICatalog {
 
-    public CatalogBook(Book book) {
-        this.book = book;
-    }
-
-    public void catalogBook(){
+    @Override
+    public void catalogBook(Book book){
         System.out.println("Book Name : "+book.getTitle()+" , Book Author : "+book.getAuthor());
+        System.out.println("Book Type : "+book.getBookType());
     }
 }

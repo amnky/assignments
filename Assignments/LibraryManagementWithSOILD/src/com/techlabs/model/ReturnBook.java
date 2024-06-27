@@ -1,17 +1,11 @@
 package com.techlabs.model;
 
-public class ReturnBook {
-    private User user;
-    private Book book;
+public class ReturnBook implements IReturn {
 
-    public ReturnBook(User user, Book book) {
-        this.user = user;
-        this.book = book;
-    }
-
-    public void returnBook(){
+    @Override
+    public void returnBook(User user, Book book){
         book.setBorrowed(false);
-        System.out.println("User "+user.getUserName()+" returned "+book.getTitle());
+        System.out.println("User "+user.getUserName()+" has returned "+book.getTitle());
     }
 
 }

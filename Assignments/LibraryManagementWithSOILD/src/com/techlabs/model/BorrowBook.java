@@ -3,17 +3,12 @@ package com.techlabs.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BorrowBook {
-    private User user;
-    private Book book;
+public class BorrowBook implements IBorrow {
 
-    public BorrowBook(User user, Book book) {
-        this.user = user;
-        this.book = book;
-    }
-
-    public void borrowBook(){
+    @Override
+    public void borrowBook(User user, Book book){
         book.setBorrowed(true);
+        System.out.println("Book and Borrower Details");
         System.out.println("User ID : "+user.getUserId()+" , User Name : "+user.getUserName());
         System.out.println("Book Title : "+book.getTitle()+" , Book Author : "+book.getAuthor());
     }

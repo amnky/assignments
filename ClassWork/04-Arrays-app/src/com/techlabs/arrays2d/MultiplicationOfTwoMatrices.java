@@ -13,16 +13,16 @@ public class MultiplicationOfTwoMatrices {
 		System.out.println("Enter number of coloumns for array 1");
 		int colOfFirstMatirx = scanner.nextInt();
 
-		int[][] array1 = new int[rowsOfFirstMatirx][colOfFirstMatirx];
+		int[][] matrixOne = new int[rowsOfFirstMatirx][colOfFirstMatirx];
 
 		System.out.println("Enter number of rows for array 2");
 		int rowsOfSecondMatrix= scanner.nextInt();
 		System.out.println("Enter number of coloumns for array 2");
 		int colOfSecondMatrix = scanner.nextInt();
 
-		int[][] array2 = new int[rowsOfSecondMatrix][colOfSecondMatrix];
+		int[][] matrixTwo = new int[rowsOfSecondMatrix][colOfSecondMatrix];
 
-		int[][] array3 = new int[rowsOfFirstMatirx][colOfSecondMatrix];
+		int[][] matrixThree = new int[rowsOfFirstMatirx][colOfSecondMatrix];
 
 		if (colOfFirstMatirx != rowsOfSecondMatrix) {
 			System.out.println("Multiplication of these two matrix is not possible");
@@ -31,14 +31,14 @@ public class MultiplicationOfTwoMatrices {
 			System.out.println("Enter array elements of 2D Array 1");
 			for (int i = 0; i < rowsOfFirstMatirx; i++) {
 				for (int j = 0; j < colOfFirstMatirx; j++) {
-					array1[i][j] = scanner.nextInt();
+					matrixOne[i][j] = scanner.nextInt();
 				}
 			}
 
 			System.out.println("Enter array elements of 2D Array 2");
 			for (int i = 0; i < rowsOfSecondMatrix; i++) {
 				for (int j = 0; j < colOfSecondMatrix; j++) {
-					array2[i][j] = scanner.nextInt();
+					matrixTwo[i][j] = scanner.nextInt();
 				}
 			}
 
@@ -46,13 +46,13 @@ public class MultiplicationOfTwoMatrices {
 			for (int i = 0; i < rowsOfFirstMatirx; i++) {
 				for (int j = 0; j < colOfSecondMatrix; j++) {
 					for (int k = 0; k < rowsOfSecondMatrix; k++)
-						array3[i][j] += array1[i][k] * array2[k][j];
+						matrixThree[i][j] += matrixOne[i][k] * matrixTwo[k][j];
 				}
 			}
 
 			for (int i = 0; i < rowsOfFirstMatirx; i++) {
 				for (int j = 0; j < colOfSecondMatrix; j++) {
-					System.out.print(array3[i][j] + " ");
+					System.out.print(matrixThree[i][j] + " ");
 				}
 				System.out.println();
 			}
