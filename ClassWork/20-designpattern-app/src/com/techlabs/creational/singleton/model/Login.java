@@ -8,7 +8,6 @@ public class Login {
     public static Login getLogin(){
         if(login==null)
             login=new Login();
-
         return login;
     }
 
