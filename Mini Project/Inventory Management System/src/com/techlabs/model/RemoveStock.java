@@ -4,7 +4,6 @@ import com.techlabs.exceptions.InsufficientStockException;
 import com.techlabs.exceptions.InvalidProductIdException;
 
 import java.util.Date;
-import java.util.List;
 
 public class RemoveStock implements TransactionType{
     private ProductManager productManager;

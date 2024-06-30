@@ -6,16 +6,6 @@ import java.util.stream.Collectors;
 
 public class TransactionManager implements TransactionManagement{
     private List<Transaction> transactions = new ArrayList<>();
-    private ProductManager productManager;
-
-    public TransactionManager(ProductManager productManager) {
-        this.productManager = productManager;
-    }
-
-    @Override
-    public synchronized void executeTransaction(TransactionType transactionType, String productId, int productQuantity) {
-        transactionType.execute(productId,productQuantity);
-    }
 
     public synchronized void recordTransaction(Transaction transaction){
         transactions.add(transaction);

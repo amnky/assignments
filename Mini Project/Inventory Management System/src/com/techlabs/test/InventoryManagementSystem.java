@@ -11,12 +11,11 @@ import java.util.concurrent.Executors;
 public class InventoryManagementSystem {
     private static ProductManager productManager = new ProductManager();
     private static SupplierManager supplierManager = new SupplierManager();
-    private static TransactionManager transactionManager = new TransactionManager(productManager);
-    private static DataPersistance datamanager = new DataManager();
+    private static TransactionManager transactionManager = new TransactionManager();
+    private static DataPersistance dataManager = new DataManager();
     private static ExecutorService executorService = Executors.newFixedThreadPool(10);
     private static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
-//        loadData();
         while (true){
             displayMenu();
             handleUserInput();
@@ -341,9 +340,9 @@ public class InventoryManagementSystem {
     private static void saveData() {
         executorService.submit(() -> {
             try {
-                datamanager.saveProducts(productManager.getAllProducts());
-                datamanager.saveSuppliers(supplierManager.getAllSuppliers());
-                datamanager.saveTransactions(transactionManager.getAllTransactions());
+                dataManager.saveProducts(productManager.getAllProducts());
+                dataManager.saveSuppliers(supplierManager.getAllSuppliers());
+                dataManager.saveTransactions(transactionManager.getAllTransactions());
                 System.out.println("Data saved successfully.");
             }
 
@@ -356,17 +355,17 @@ public class InventoryManagementSystem {
     private static void loadData() {
         executorService.submit(() -> {
             try {
-                List<Product> products = datamanager.loadProducts();
+                List<Product> products = dataManager.loadProducts();
                 for (Product product : products) {
                     productManager.addProduct(product);
                 }
 
-                List<Supplier> suppliers = datamanager.loadSuppliers();
+                List<Supplier> suppliers = dataManager.loadSuppliers();
                 for (Supplier supplier : suppliers) {
                     supplierManager.addSupplier(supplier);
                 }
 
-                List<Transaction> transactions = datamanager.loadTransactions();
+                List<Transaction> transactions = dataManager.loadTransactions();
                 for (Transaction transaction : transactions) {
                     transactionManager.recordTransaction(transaction);
                 }
