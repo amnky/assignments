@@ -1,7 +1,6 @@
 package com.techlabs.model;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -16,6 +15,10 @@ public class TransactionManager implements TransactionManagement{
     @Override
     public synchronized void executeTransaction(TransactionType transactionType, String productId, int productQuantity) {
         transactionType.execute(productId,productQuantity);
+    }
+
+    public synchronized void recordTransaction(Transaction transaction){
+        transactions.add(transaction);
     }
 
     @Override

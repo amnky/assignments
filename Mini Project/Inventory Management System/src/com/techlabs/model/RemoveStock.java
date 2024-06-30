@@ -8,12 +8,12 @@ import java.util.List;
 
 public class RemoveStock implements TransactionType{
     private ProductManager productManager;
-    private List<Transaction> transactions;
+    private TransactionManager transactionManager;
     private UIDGenerator uidGenerator;
 
-    public RemoveStock(ProductManager productManager, List<Transaction> transactions) {
+    public RemoveStock(ProductManager productManager, TransactionManager transactionManager) {
         this.productManager = productManager;
-        this.transactions = transactions;
+        this.transactionManager = transactionManager;
         this.uidGenerator = new UIDGenerator();
     }
 
@@ -27,6 +27,7 @@ public class RemoveStock implements TransactionType{
             throw new InsufficientStockException("Insufficient stock for Product ID : "+productId);
         }
         product.setProductQuantity(product.getProductQuantity()-productQuantity);
-        transactions.add(new Transaction(uidGenerator.generateTransactionId(),productId,"remove",productQuantity,new Date()));
+        Transaction transaction = new Transaction(uidGenerator.generateTransactionId(),productId,"remove",productQuantity, new Date());
+        transactionManager.recordTransaction(transaction);
     }
 }

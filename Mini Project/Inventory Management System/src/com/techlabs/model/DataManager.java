@@ -3,7 +3,6 @@ package com.techlabs.model;
 import com.techlabs.exceptions.DataPersistenceException;
 
 import java.io.*;
-import java.util.Collections;
 import java.util.List;
 
 public class DataManager implements DataPersistance{

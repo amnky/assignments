@@ -7,12 +7,12 @@ import java.util.List;
 
 public class AddStock implements TransactionType{
     private ProductManager productManager;
-    private List<Transaction> transactions;
+    private TransactionManager transactionManager;
     private UIDGenerator uidGenerator;
 
-    public AddStock(ProductManager productManager, List<Transaction> transactions) {
+    public AddStock(ProductManager productManager, TransactionManager transactionManager) {
         this.productManager = productManager;
-        this.transactions = transactions;
+        this.transactionManager = transactionManager;
         this.uidGenerator = new UIDGenerator();
     }
 
@@ -23,6 +23,7 @@ public class AddStock implements TransactionType{
             throw new InvalidProductIdException("Product ID "+productId+" is invalid");
         }
         product.setProductQuantity(product.getProductQuantity()+productQuantity);
-        transactions.add(new Transaction(uidGenerator.generateTransactionId(),productId,"add",productQuantity, new Date()));
+        Transaction transaction = new Transaction(uidGenerator.generateTransactionId(),productId,"add",productQuantity, new Date());
+        transactionManager.recordTransaction(transaction);
     }
 }
