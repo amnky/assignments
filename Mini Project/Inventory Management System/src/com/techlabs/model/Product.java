@@ -1,6 +1,9 @@
 package com.techlabs.model;
 
-public class Product {
+import java.io.Serializable;
+
+public class Product implements Serializable {
+    private static final long serialVersionUID = 1L;
     private String productId;
     private String productName;
     private String productDescription;
@@ -57,12 +60,11 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product{" +
-                "productId='" + productId + '\'' +
-                ", productName='" + productName + '\'' +
-                ", productDescription='" + productDescription + '\'' +
-                ", productQuantity=" + productQuantity +
-                ", productPrice=" + productPrice +
-                '}';
+        return "\n" +
+                "Product Id : " + productId + '\n' +
+                "Product Name : " + productName + '\n' +
+                "Product Description : " + productDescription + '\n' +
+                "Product Quantity : " + productQuantity +'\n'+
+                "Product Price : " + productPrice + '\n';
     }
 }

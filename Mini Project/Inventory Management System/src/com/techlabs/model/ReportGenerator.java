@@ -10,7 +10,10 @@ public class ReportGenerator {
     private List<Supplier> suppliers;
     private List<Transaction> transactions;
 
-    public ReportGenerator() {
+    public ReportGenerator(ProductManager productManager, SupplierManager supplierManager, TransactionManager transactionManager) {
+        this.productManager = productManager;
+        this.supplierManager = supplierManager;
+        this.transactionManager = transactionManager;
         this.products = productManager.getAllProducts();
         this.suppliers = supplierManager.getAllSuppliers();
         this.transactions = transactionManager.getAllTransactions();

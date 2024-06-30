@@ -1,6 +1,9 @@
 package com.techlabs.model;
 
-public class Supplier {
+import java.io.Serializable;
+
+public class Supplier implements Serializable {
+    private static final long serialVersionUID = 1L;
     private String supplierId;
     private String supplierName;
     private String supplierContactInfo;
@@ -37,10 +40,9 @@ public class Supplier {
 
     @Override
     public String toString() {
-        return "Supplier{" +
-                "supplierId='" + supplierId + '\'' +
-                ", supplierName='" + supplierName + '\'' +
-                ", supplierContactInfo='" + supplierContactInfo + '\'' +
-                '}';
+        return "\n" +
+                "Supplier Id : " + supplierId + '\n' +
+                "Supplier Name : " + supplierName + '\n' +
+                "Supplier Contact Information : " + supplierContactInfo + '\n';
     }
 }
