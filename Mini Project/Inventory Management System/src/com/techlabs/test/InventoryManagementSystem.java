@@ -264,12 +264,13 @@ public class InventoryManagementSystem {
     }
 
     private static void transactionOperations() {
-        while(true){
+        while (true) {
             try {
                 System.out.println("1. Add Stock");
                 System.out.println("2. Remove Stock");
-                System.out.println("3. View All Transactions");
-                System.out.println("4. Back to Main Menu");
+                System.out.println("3. View Transaction History for a Product");
+                System.out.println("4. View Transaction History for All Products");
+                System.out.println("5. Back to Main Menu");
                 System.out.print("Enter your choice: ");
                 int choice = scanner.nextInt();
                 scanner.nextLine(); // consume newline character
@@ -306,27 +307,36 @@ public class InventoryManagementSystem {
                         });
                         break;
                     case 3:
+                        System.out.print("Enter Product ID to view transaction history: ");
+                        String productId = scanner.nextLine();
                         executorService.submit(() -> {
-                            List<Transaction> transactions = transactionManager.getAllTransactions();
-                            System.out.println("All Transactions:");
+                            List<Transaction> transactions = transactionManager.getTransactionHistory(productId);
+                            System.out.println("Transaction History for Product ID " + productId + ":");
                             for (Transaction t : transactions) {
                                 System.out.println(t);
                             }
                         });
                         break;
                     case 4:
+                        executorService.submit(() -> {
+                            List<Transaction> transactions = transactionManager.getAllTransactions();
+                            System.out.println("Transaction History for All Products:");
+                            for (Transaction t : transactions) {
+                                System.out.println(t);
+                            }
+                        });
+                        break;
+                    case 5:
                         return; // Exit to main menu
                     default:
                         System.out.println("Invalid choice. Please try again.");
                 }
-            }
-
-            catch (Exception e) {
+            } catch (Exception e) {
                 System.out.println("An unexpected error occurred: " + e.getMessage());
-
             }
         }
     }
+
 
     private static void saveData() {
         executorService.submit(() -> {
