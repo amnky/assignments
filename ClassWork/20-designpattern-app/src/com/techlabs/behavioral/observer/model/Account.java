@@ -1,5 +1,9 @@
 package com.techlabs.behavioral.observer.model;
 
+
+import com.techlabs.behavioral.observer.exceptions.NotifierAlreadyExistException;
+import com.techlabs.behavioral.observer.exceptions.NotifierDoestNotExistException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,11 +45,28 @@ public class Account {
     }
 
     public void registerNotifier(INotifier notifier){
-        //changes made
-        if(!notifiers.contains(notifier)){
-            notifiers.add(notifier);
+        for (INotifier existingNotifier : notifiers) {
+            if (existingNotifier.getClass().equals(notifier.getClass())) {
+                throw new NotifierAlreadyExistException(notifier.getClass().getSimpleName());
+            }
         }
+        notifiers.add(notifier);
     }
+
+    public void deregisterNotifier(INotifier notifier) {
+        boolean notifierExists = false;
+        for (INotifier existingNotifier : notifiers) {
+            if (existingNotifier.getClass().equals(notifier.getClass())) {
+                notifierExists = true;
+                break;
+            }
+        }
+        if (!notifierExists) {
+            throw new NotifierDoestNotExistException(notifier.getClass().getSimpleName());
+        }
+        notifiers.remove(notifier);
+    }
+
 
     public void withdrawAmount(int amount){
         if(this.accountBalance>amount){
