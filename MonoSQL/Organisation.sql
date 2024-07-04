@@ -127,12 +127,14 @@ select * from EMP where JOB like "MANAGER";
 
 -- 4) Display all the employees whose salary is between 2000 and 5000
 select * from EMP where SAL between 2000 and 5000;
+#select * from EMP where SAL >=2000 and SAL<=5000;
 
 -- 5) Display all the employees whose commission is null
 select * from EMP where COMM is NULL;
 
 -- 6) Display emp_name,salary,comission,ctc(calculated column)
 select ENAME, SAL , coalesce(COMM, 0) as COMM, (SAL + coalesce(COMM, 0)) as CTC from EMP;
+#select ENAME, SAL , COMM as COMM, (SAL + ifnull(COMM, 0)) as CTC from EMP;
 
 -- 7) Display hire_date, current_date, tenure(calculated col) of the emp
 select 
@@ -147,6 +149,24 @@ from EMP;
 
 -- 8) Display all the employees whose name starts with s
 select * from EMP where ENAME like 's%';
+
+-- 8.1) Display all the employees whose name's second charatcer is a
+select * from EMP where ENAME like '__a%';
+
+-- 8.2) Name with length 5, (use five underscore) 
+select * from EMP where ENAME like '_____';
+
+-- 8.3) This query will return all employee names starting with 'A', 'J', or 'S'.
+SELECT ENAME 
+FROM EMP 
+WHERE ENAME REGEXP '^[AJS]';
+
+-- 8.4) This will print all employees with names length 4;
+SELECT ENAME 
+FROM EMP 
+WHERE ENAME REGEXP '^[a-zA-Z]{4}$';
+
+
 
 -- 9) Display unique department numbers from the employee table
 select distinct DEPTNO from EMP;
@@ -168,6 +188,7 @@ order by DEPTNO asc;
 
 -- 16) Display All employees in the same dept of 'SCOTT'
 select * from EMP where DEPTNO = (select DEPTNO from EMP where ENAME like 'SCOTT');
+#select e1.* from EMP e1, EMP e2 where e1.DEPTNO  = e2.DEPTNO and e2.ENAME like 'SCOTT' and e1.ENAME not like 'SCOTT';
 
 #17. Employees having same designation of SMITH
 select * from EMP where JOB like (select JOB from EMP where ENAME like 'SMITH');
@@ -175,8 +196,8 @@ select * from EMP where JOB like (select JOB from EMP where ENAME like 'SMITH');
 #18. Employee who are reproting under KING
 select * from EMP where MGR = (select EMPNO from EMP where ENAME like 'KING');
 
-#19. Employees who have same salary of BLAKE
-select * from EMP where SAL = (select SAL from EMP where ENAME like 'BLAKE');
+#19. Employees who have same salary of SCOTT
+select * from EMP where SAL = (select SAL from EMP where ENAME like 'SCOTT') and ENAME!='SCOTT';
 
 #20. Display departmentwise number of employees
 select DNAME, count(*) as NUMOFEMPLYEES 
