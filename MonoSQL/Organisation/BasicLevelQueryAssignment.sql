@@ -1,3 +1,4 @@
+USE ORGANISATION;
 SELECT * FROM organisation.emp;
 
 #1)Display all employee names in ascending order
