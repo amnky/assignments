@@ -75,10 +75,10 @@ FROM EMP
 GROUP BY DEPTNO, JOB
 ORDER BY DEPTNO, JOB;
 
-#20)Display how many employees are there for each department
+#19)Display how many employees are there for each department
 select count(*) as NumOfEmployees, DEPTNO from EMP 
 group by DEPTNO;
 
-#21)Display the rank of each employee with respect to their salary (highest salary will be rank 1)
+#20)Display the rank of each employee with respect to their salary (highest salary will be rank 1)
 select e1.ENAME, e1.JOB, e1.SAL, (select count(e2.SAL)+1 from EMP e2 where e2.SAL > e1.SAL) as SalaryRank from EMP e1
 order by e1.SAL desc;
