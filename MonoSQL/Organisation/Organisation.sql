@@ -271,5 +271,40 @@ JOIN EMP m on e.MGR = m.EMPNO
 JOIN DEPT d on d.DEPTNO = e.DEPTNO
 order by d.DNAME;
 
+# 32. Display location name,city name,country name,region name , ORDER by region name
+select STREET_ADDRESS as LocationName, CITY as CityName, COUNTRY_NAME, REGION_NAME
+from LOCATIONS l join COUNTRIES c 
+on l.COUNTRY_ID = c.COUNTRY_ID join REGIONS r
+on r.REGION_ID = c.REGION_ID
+order by REGION_NAME;
 
+
+# 33. Display Country where there are no locations availbale in location table
+SELECT c.COUNTRY_NAME 
+FROM COUNTRIES c
+LEFT JOIN LOCATIONS l ON c.COUNTRY_ID = l.COUNTRY_ID
+WHERE l.COUNTRY_ID IS NULL;
+
+
+# 34. Display the regions where there are no countries available in country table
+select r.REGION_NAME
+from REGIONS r left join COUNTRIES C
+on c.REGION_ID=r.REGION_ID
+WHERE c.REGION_ID IS NULL;
+
+# 35. Find employees whose direct or indirect manager is 'KING'
+WITH RECURSIVE EmployeeHierarchy AS (
+    -- Base case: find 'KING'
+    SELECT e1.EMPNO, e1.ENAME, e1.MGR
+    FROM EMP e1
+    WHERE e1.ENAME = 'KING'
+    UNION ALL
+    -- Recursive case: find employees reporting to employees already in the hierarchy
+    SELECT e2.EMPNO, e2.ENAME, e2.MGR
+    FROM EMP e2
+    INNER JOIN EmployeeHierarchy eh ON e2.MGR = eh.EMPNO
+)
+SELECT ENAME
+FROM EmployeeHierarchy
+WHERE ENAME <> 'KING';
 
