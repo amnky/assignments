@@ -4,67 +4,66 @@ import java.util.Scanner;
 
 public class MatrixMultiplication {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-		System.out.println("Enter number of rows for array 1");
-		int rows1 = sc.nextInt();
-		System.out.println("Enter number of coloumns for array 1");
-		int col1 = sc.nextInt();
+        // Input dimensions of the first matrix
+        System.out.println("Enter number of rows for the first matrix:");
+        int numRowsMatrix1 = scanner.nextInt();
+        System.out.println("Enter number of columns for the first matrix:");
+        int numColsMatrix1 = scanner.nextInt();
+        int[][] matrix1 = new int[numRowsMatrix1][numColsMatrix1];
 
-		int[][] array1 = new int[rows1][col1];
+        // Input dimensions of the second matrix
+        System.out.println("Enter number of rows for the second matrix:");
+        int numRowsMatrix2 = scanner.nextInt();
+        System.out.println("Enter number of columns for the second matrix:");
+        int numColsMatrix2 = scanner.nextInt();
+        int[][] matrix2 = new int[numRowsMatrix2][numColsMatrix2];
 
-		System.out.println("Enter number of rows for array 2");
-		int rows2 = sc.nextInt();
-		System.out.println("Enter number of coloumns for array 2");
-		int col2 = sc.nextInt();
+        // Check if matrix multiplication is possible
+        if (numColsMatrix1 != numRowsMatrix2) {
+            System.out.println("Multiplication of these two matrices is not possible.");
+            return; // Exit if multiplication isn't valid
+        }
 
-		int[][] array2 = new int[rows2][col2];
+        int[][] resultMatrix = new int[numRowsMatrix1][numColsMatrix2]; // Matrix to store the result
 
-		int[][] array3 = new int[rows1][col2];
+        // User input for matrix 1
+        System.out.println("Enter elements of the first matrix:");
+        for (int i = 0; i < numRowsMatrix1; i++) {
+            for (int j = 0; j < numColsMatrix1; j++) {
+                matrix1[i][j] = scanner.nextInt();
+            }
+        }
 
-		//checking if matrix multiplication is possible or not
-		if (col1 != rows2) {
-			System.out.println("Multiplication of these two matrix is not possible");
-		} else {
+        // User input for matrix 2
+        System.out.println("Enter elements of the second matrix:");
+        for (int i = 0; i < numRowsMatrix2; i++) {
+            for (int j = 0; j < numColsMatrix2; j++) {
+                matrix2[i][j] = scanner.nextInt();
+            }
+        }
 
-			//user inputs matrix 1
-			System.out.println("Enter array elements of 2D Array 1");
-			for (int i = 0; i < rows1; i++) {
-				for (int j = 0; j < col1; j++) {
-					array1[i][j] = sc.nextInt();
-				}
-			}
+        // Matrix multiplication logic
+        System.out.println("Multiplication result:");
+        for (int i = 0; i < numRowsMatrix1; i++) {
+            for (int j = 0; j < numColsMatrix2; j++) {
+                for (int k = 0; k < numRowsMatrix2; k++) {
+                    resultMatrix[i][j] += matrix1[i][k] * matrix2[k][j];
+                }
+            }
+        }
+        
+        // Print resulting matrix
+        for (int[] row : resultMatrix) {
+            for (int element : row) {
+                System.out.print(element + " ");
+            }
+            System.out.println(); // Move to the next row after printing a row
+        }
 
-			//user inputs matrix 2
-			System.out.println("Enter array elements of 2D Array 2");
-			for (int i = 0; i < rows2; i++) {
-				for (int j = 0; j < col2; j++) {
-					array2[i][j] = sc.nextInt();
-				}
-			}
-
-			//Matrix multiplcation logic
-			System.out.println("Multiplication result");
-			for (int i = 0; i < rows1; i++) {
-				for (int j = 0; j < col2; j++) {
-					for (int k = 0; k < rows2; k++)
-						array3[i][j] += array1[i][k] * array2[k][j];
-				}
-			}
-			
-			//Printing resulting matrix after multiolication of two matrices
-			for (int i = 0; i < rows1; i++) {
-				for (int j = 0; j < col2; j++) {
-					System.out.print(array3[i][j] + " ");
-				}
-				System.out.println();
-			}
-		}
-
-		sc.close();
-
-	}
-
+        scanner.close(); 
+    }
 }
