@@ -28,8 +28,9 @@ public class pigdiceapplication {
 			System.out.println("Roll or Hold:");
 			String action = sc.nextLine();
 			int scoreForTurn = calclateScoreForTurn(action, random, sc);
-			System.out.println("Score for the turn : " + scoreForTurn);
 			sum += scoreForTurn;
+			System.out.println("Score for the turn : " + scoreForTurn);
+			
 			System.out.println();
 		}
 		return new int[] { sum, totalTurns };
@@ -47,6 +48,7 @@ public class pigdiceapplication {
 			}
 
 			scoreForTurn += dice;
+			System.out.println("Current score is : "+scoreForTurn);
 			System.out.println("Roll or Hold");
 			action = sc.nextLine();
 		}
